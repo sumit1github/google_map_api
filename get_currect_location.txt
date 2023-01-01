@@ -1,0 +1,29 @@
+## here we will get current location.
+as a return we will get longitude and latitude
+
+code----------------------------------
+
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+  <div id="navbar"><span>Red Stapler - Geolocation API</span></div>
+  <div id="wrapper">
+    <button id="location-button" type="button" onclick="get_long_lat()">Get User Location</button>
+    <div id="output"></div>
+  </div>
+
+    <script>
+        function get_long_lat(){
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position){
+                    console.log(position);  <------ lat and long of the current user
+                    
+                
+                })
+            }
+        }
+    </script>
